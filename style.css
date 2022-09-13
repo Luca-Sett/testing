@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400;600");
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Poppins;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+button {
+  all: unset;
+  background: #ed6e6b;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.3s;
+  position: relative;
+  min-width: 100px;
+  transition: letter-spacing 0.3s;
+}
+
+button:hover,
+button:focus-visible {
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* type 1 */
+.type-1::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 5px;
+  z-index: -1;
+  background-image: url("./tail.svg");
+  background-size: 100% 100%;
+  transition: transform 0.4s;
+}
+
+.type-1:hover::after,
+.type-1:focus-visible::after {
+  transform: translateX(27px);
+}
+
+.type-1::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 16px;
+  top: 0;
+  z-index: -1;
+  background-image: url("./ears.svg");
+  background-size: 100% 100%;
+  transition: transform 0.4s;
+}
+
+.type-1:hover::before,
+.type-1:focus-visible::before {
+  transform: translateY(-16px);
+}
+
+/* type 2 */
+.type-2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 5px;
+  z-index: -1;
+  background-image: url("./tail.svg");
+  background-size: 100% 100%;
+  transition: transform 0.4s;
+}
+
+.type-2:hover::after,
+.type-2:focus-visible::after {
+  transform: translateX(27px);
+}
+
+.type-2::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 6px;
+  bottom: 21px;
+  z-index: -1;
+  background-image: url("./ears-and-snout.svg");
+  background-size: 100% 100%;
+  transform: scale(0);
+  transition: transform 0.4s;
+  /* filter: brightness(0.9); */
+}
+
+.type-2:hover::before,
+.type-2:focus-visible::before {
+  transform: scale(2);
+}
+
+/* type 3 */
+
+.snout {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 11px;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+
+.ears {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 16px;
+  top: 0;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+
+.tail {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 5px;
+  z-index: -1;
+  transition: transform 0.4s;
+}
+
+.type-3:hover .snout {
+  transform: translateX(-12px);
+}
+
+.type-3:hover .ears {
+  transform: translateY(-16px);
+}
+
+.type-3:hover .tail {
+  transform: translateX(27px);
+}
